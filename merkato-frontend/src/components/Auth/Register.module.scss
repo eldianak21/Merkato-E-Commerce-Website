@@ -1,0 +1,9 @@
+/* Most styles are shared with Login.css */
+.terms-agreement {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 0.5);
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}

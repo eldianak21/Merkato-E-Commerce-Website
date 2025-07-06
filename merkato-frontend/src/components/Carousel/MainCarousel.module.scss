@@ -1,0 +1,131 @@
+.main-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.slide {
+  position: relative;
+  height: 500px;
+}
+
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  color: var(--light-color);
+  max-width: 500px;
+  z-index: 2;
+}
+
+.slide-content h2 {
+  font-size: 3rem;
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: var(--font-heading);
+}
+
+.slide-content p {
+  font-size: 1.2rem;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.slide-content .btn {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+  padding: calc(var(--spacing-unit) * 1.5) calc(var(--spacing-unit) * 3);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+.slide-content .btn:hover {
+  background-color: darken(#A31621, 10%);
+  transform: translateY(-3px);
+}
+
+/* Override slick dots */
+.slick-dots {
+  bottom: calc(var(--spacing-unit) * 2);
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: var(--light-color);
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--primary-color);
+  opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .slide {
+    height: 400px;
+  }
+
+  .slide-content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide {
+    height: 350px;
+  }
+
+  .slide-content {
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .slide-content h2 {
+    font-size: 2rem;
+  }
+
+  .slide-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    height: 300px;
+  }
+
+  .slide-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-unit);
+  }
+
+  .slide-content p {
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-unit);
+  }
+
+  .slide-content .btn {
+    padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+    font-size: 0.9rem;
+  }
+}

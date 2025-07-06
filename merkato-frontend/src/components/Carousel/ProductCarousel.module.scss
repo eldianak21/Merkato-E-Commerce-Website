@@ -1,0 +1,52 @@
+.product-carousel-section {
+  padding: calc(var(--spacing-unit) * 4) 0;
+}
+
+.section-header {
+  @mixin flex-between;
+  margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.carousel-nav {
+  display: flex;
+  gap: calc(var(--spacing-unit) * 0.5);
+}
+
+.carousel-nav button {
+  @mixin button-reset;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--gray-color);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.carousel-nav button:hover {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.carousel-item {
+  padding: 0 calc(var(--spacing-unit) * 1.5);
+}
+
+/* Override slick slider styles */
+.slick-list {
+  margin: 0 calc(var(--spacing-unit) * -1.5);
+  padding: calc(var(--spacing-unit) * 1.5) 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .product-carousel-section {
+    padding: calc(var(--spacing-unit) * 3) 0;
+  }
+
+  .section-header {
+    margin-bottom: calc(var(--spacing-unit) * 2);
+  }
+}
